@@ -26,7 +26,8 @@ def watch_directory(directory):
                     image = Image.open(temp_file_path)
                     # Change the format to 4:6
                     new_format = (4, 6)
-                    image.thumbnail(new_format, Image.ANTIALIAS)
+                    image.thumbnail(new_format, Image.LANCZOS)  # Use LANCZOS for antialiasing
+
                     # Save the modified image
                     image.save(temp_file_path)
 
